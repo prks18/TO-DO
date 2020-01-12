@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- materializecss -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Sans" />
+    <style>
+        .container{
+           margin-top:5%;
+           margin-left:20%;
+           margin-right: 20%;
+           font-family:"Josefin Sans";
+           background: linear-gradient(to bottom,#b0bec5,#546e7a);
+           padding-left:20%;         
+           
+}
+#clearTasks{
+    margin:10%;
+    background:linear-gradient(to bottom,#ff416c,#ff4b2b)
+}
+.fa-pencil-square-o{
+    color:black;    
+}
+.fa-pencil-square-o:hover{
+    color:orangered;
+}
+.fa-trash{
+color:black;
+}
+.fa-trash:hover{
+    color:orangered;
+}
+#title{
+    margin-bottom:10%;
+    background:linear-gradient(to bottom,#ff416c,#ff4b2b);
+    font-size:xx-large;
+    color:white;
+} 
+.none{
+    cursor: default;
+}
+#clearButton{
+    margin:10%;
+}
+
+.para:not(:focus){
+     text-overflow: ellipsis;
+	 width: 200px;
+	 white-space: nowrap;
+	 overflow: hidden;
+	
+	 /* for good looks */
+	 padding: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col s12 l8">
+                <div id="main" class="card">
+                    <div class="card-content">
+                        <div class="card" id="title">
+                            <div class="card-content">
+                                <span class="card-title l9">
+                                    <center>To do</center>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form id="Task-form">
+
+
+
+                                <div class="input-field col s11 card" id="taskinput">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="TaskInput" class="materialize-textarea"></textarea>
+                                    <label for="TaskInput">New Task</label>
+                                    <a class="halfway-fab  btn-floating red" id="AddTask"><i class="material-icons">add</i></a>
+                                </div>
+
+                                &nbsp;
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <p class="btn none" id="title" style="font-size:x-large">Tasks</p>
+
+                            <div class="input-field">
+
+                                <input type="text" id="filterTask" />
+                                <label for="filterTask">Filter Tasks</label>
+
+
+                            </div>
+                            <ul class="collection" id="UlList">
+
+                            </ul>
+                            <div class="row">
+                                <p id="clearTasks" class="btn red">Clear Tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app1.js"></script>
+</body>
+
+</html>
